@@ -1,2 +1,5 @@
-# Fundamental Modeling Concepts (FMC) #
-a modeling method...
+---
+title: Fundamental Modeling Concepts (FMC)
+---
+
+FMC is a modeling method...
