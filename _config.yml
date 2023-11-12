@@ -3,3 +3,5 @@ plugins:
 - jekyll-remote-theme # add this line to the plugins list if you already have one
 title: Fundamental Modeling Concepts
 description: Information about the modeling method FMC
+show_downloads: false
+logo: /assets/img/logo.gif
