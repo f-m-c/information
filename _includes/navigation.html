@@ -15,7 +15,9 @@
     <ul>
     {% for entry in site.data.navigation %}
         {% if entry.url == current_page %}
-            {% assign current = ' class="current"' %}
+            <!--  {% assign current = ' class="current"' %} -->
+            {% assign current = ' style="font-weight: bold;"' %}
+
         {% else %}
             <!-- We have to declare it 'null' to ensure it doesn't propagate. -->
             {% assign current = null %}

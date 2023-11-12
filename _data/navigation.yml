@@ -1,8 +1,5 @@
-- title: Home
-  url: /
-
 - title: FMC Overview
-  url: /10-overview/
+  url: /
   sublinks:
     - title: Quick Introduction
       url: /10-overview/quick_introduction
@@ -16,3 +13,6 @@
       url: /10-overview/fmc_and_uml
     - title: Glossary
       url: /10-overview/glossary     
+
+- title: FMC Tools
+  url: /20-tools      
