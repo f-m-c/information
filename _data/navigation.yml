@@ -1,12 +1,18 @@
 - title: Home
   url: /
 
-- title: Group of Things
-  url: /group/
+- title: FMC Overview
+  url: /10-overview/
   sublinks:
-    - title: Sub-item 1
-      url: /group/si1
-    - title: Sub-item 2
-      url: /group/si2
-    - title: Sub-item 3
-      url: /group/si3
+    - title: Quick Introduction
+      url: /10-overview/quick_introduction
+    - title: Notation Reference
+      url: /10-overview/notation_reference
+    - title: Metamodel
+      url: /10-overview/metamodel
+    - title: Visualization Guidelines
+      url: /10-overview/visualization_guidelines
+    - title: FMC and UML
+      url: /10-overview/fmc_and_uml
+    - title: Glossary
+      url: /10-overview/glossary     
