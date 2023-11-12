@@ -7,6 +7,7 @@ title: Fundamental Modeling Concepts (FMC)
 
 ## What is FMC about?
 ![FMC Diagram](assets/img/home/picture.jpg)
+
 Software-intensive systems are technical systems whose behaviour is strongly influenced by large software systems. As the functional and operational requirements on such systems are increasing, the complexity to create them is becoming a critical factor. In consequence, those systems may only be built with the combined effort of many people requiring the division of labor. Controlling that complexity should be a natural interest of all participants in this creation process.
 
 Controlling that complexity not only requires the technical means to support the creation process, but also requires a high degree of efficiency to communicate about those systems. Without that efficiencyin communication it would hardly be possibly to give every participant an idea about how their pieceof work fits in the whole system or to plan how the components work together. This applies to every developer as well as to team leaders and managers who should be informed.
