@@ -1,6 +1,7 @@
 ---
 title: Quick Introduction
 ---
+# Quick Introduction
 
 The Quick Introduction to FMC should give you an idea of what FMC is about and what it looks like. The main ideas of FMC are explained using one continuous example. It is a write instead of slides collection so it is easier to understand the coherences. This text is also available as download (408.58kB).
 
@@ -18,7 +19,7 @@ Figure 1 shows a block diagram representing a model of the static compositional 
 
 This block diagram, like any block diagram, represents a real or at least imaginable real informational system. The system described is no more abstract than anything else we consider to be real. Looking at the system we see components, artifacts of our mind, which relate to tangible distinguishable physical phenomena. This view applies to our perception of technical devices and living beings as well as of any composite structure. Thus, an informational system can be seen as a composition of interacting components called agents. Each agent serves a well-defined purpose and communicates via channels and shared storages with other agents. If an agent needs to keep information over time it has access to at least one storage where information can be observed. If the purpose is not to store but to transmit information the agents are connected via channels.
 
-![Figure 1: Block diagram - Travel agency system](/assets/img/quick-intro/TravelAgency.BD.gif)
+![Figure 1: Block diagram - Travel agency system](../assets/img/quick-intro/TravelAgency.BD.gif)
 
 Agents are drawn as rectangular nodes, whereas locations are symbolized as rounded nodes. In particular, channels are depicted as small circles and storages are illustrated as larger circles or rounded nodes. Directed arcs symbolize whether an agent can read or write information from or to a storage.
 
@@ -30,7 +31,7 @@ If communication is possible in both directions, the arcs connecting the agents 
 
 Informational systems are dynamic systems. By looking for some time at the channels and locations that are used to store, change, and transmit information their behaviour can be observed. Extended Petri nets are used to visualize the behaviour of a system on a certain level of abstraction corresponding to a block diagram.
 
-![Figure 2: Petri net - Buying a ticket](/assets/img/quick-intro/TravelAgency.PN.gif)
+![Figure 2: Petri net - Buying a ticket](../assets/img/quick-intro/TravelAgency.PN.gif)
 
 Figure 2 shows a Petri net describing the causal structure of what can be observed on the channel between the travel agency and one of its customers in our example. Buying a ticket starts with the customer ordering a ticket. Then the travel agency checks the availability and in case this step is successful, a ticket may be issued to the customer concurrently with a request of payment. The customer is expected to issue the payment and when both sides have acknowledged the receipt of the money or the ticket, respectively, the transaction is finished.
 
@@ -50,7 +51,7 @@ Looking at dynamic systems we can observe values at different locations, which c
 
 Figure 3 shows an entity relationship diagram representing the structure of the information, which is found when looking at the storage labeled "reservations" and "customer data" which both the "reservation system" and the "travel organizations" can access (see Figure 1). In the middle of the diagram we see a rounded node labeled "reservations" representing the set of all reservations stored in the system. Such a reservation is defined by a customer booking a certain tour, allocating a certain seat in a certain vehicle. The tour will follow a certain route starting at some location and ending at some other location. Looking at the passengers first time customers are distinguished from regular customers. Independently, passengers can also be partitioned into business and private travellers. The system also stores which organization has arranged which reservation and which travel organization realizes which tour.
 
-![Figure 3: Entity relationship diagram - Tour reservations](/assets/img/quick-intro/TravelAgency.ERD.gif)
+![Figure 3: Entity relationship diagram - Tour reservations](../assets/img/quick-intro/TravelAgency.ERD.gif)
 
 Using entity relationship diagrams round nodes visualize different sets of entities, each being of a certain type. The sets in the example are passengers, business people, tours, vehicles etc. Each of them is defined by a set of attributes according to its type. Most elements of a sets have one or more relations to elements of another or also the same set of elements. For instance, each route has one location to start at and one location to end at. Each relationship, i.e. each set of relations between two sets of entities of a certain type, is represented by a rectangular node connected to the nodes representing the sets of entities participating in the relationship. Thus, there is one rectangle representing the "starts at" relationship and another representing the "ends at" relationship. Annotations besides the rectangle can be used to specify the predicate, an expression using natural language which defines the relationship.
 
@@ -78,7 +79,7 @@ We could continue to describe the dynamics and value structures on that level, a
 
 Knowing the system's structure presented in Figure 1 it is quite easy to understand the more complex lower-level structure presented now. To ease comprehension components from a higher-level system view should be projected into the lower-level system view whenever possible. In case implementation is done by simple refinement the result will be a containment hierarchy between the nodes representing components of different levels of abstraction. Without doubt it would be much harder to understand the example system had it been introduced on the level of adapters, mail servers, and browsers. It would have been nearly impossible to create a common understanding without any illustrations at all.
 
-![Figure 4: Block diagram - Implementation of the information help desk](/assets/img/quick-intro/TravelAgency.BD2.gif)
+![Figure 4: Block diagram - Implementation of the information help desk](../assets/img/quick-intro/TravelAgency.BD2.gif)
 
 ## What is special about FMC?
 
