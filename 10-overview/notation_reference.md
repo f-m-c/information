@@ -66,6 +66,7 @@ FMC Block diagrams show the compositional structures as a composition of collabo
 FMC diagrams for dynamic structures are based on transition-place Petri nets. They are used to express system behavior over time, depicting the actions performed by the agents. So they clarify how a system is working and how communication takes place between different agents.
 
 ### Basic Elements
+
 |  |  | |
 |--|--|--|  
 | ![Transition](../assets/img/notation_reference/dynamic/transition.gif) | transition | Stands for an operation, an event or an activity. <br/> (Note: verb should be used for identifier "T") |
@@ -73,24 +74,28 @@ FMC diagrams for dynamic structures are based on transition-place Petri nets. Th
 | ![Directed Arc](../assets/img/notation_reference/dynamic/directed_arc.gif) | directed arc | Connects a place and a transition. <br/> (Note: here arc weight = 1, i.e. exactly one token will be consumed or produced when the connected transition fires) |
 
 ### Further Elements 
+
 | |  | |
 |--|--|--|  
 | ![No Operation](../assets/img/notation_reference/dynamic/NOP.gif) | NOP | A transition meaning No OPeration. <br/> (Note: often used to preserve the bipartiteness) |
 | ![Swimlane Divider](../assets/img/notation_reference/dynamic/swimlane_divider.gif) | swimlane divider | Distinguishes competences of agents. |
 
 ### Common Structures
+
 |  |  | |
 |--|--|--|  
 | ![Sequence](../assets/img/notation_reference/dynamic/sequence.gif) <br/> sequence <br/> Defines that transition T1 fires first, followed by transition T2, followed by transition T3 … . | ![Concurrency](../assets/img/notation_reference/dynamic/concurrency.gif) <br/> concurrency <br/> Means that transitions have no causal ordering. The transitions T1, …, Tn are concurrent, the firing of T1, ... , Tn has no special order. | ![Case](../assets/img/notation_reference/dynamic/case.gif) <br/> case (conflict) <br/> Is used to choose one transition among others. Only one of the transitions T1, …, Tn will fire, depending on the conditions C1, …, Cn associated to the arcs. |
 | ![Loop](../assets/img/notation_reference/dynamic/loop.gif) <br/> loop <br/> Is used to repeat the firing. Transition T1 will be repeated as long as condition C1 is fulfilled. Often C2 is not mentioned as it is assumed to be "else". | ![Communication](../assets/img/notation_reference/dynamic/communication.gif) <br/> communication <br/> Whenever a swimlane divider is crossed communication takes place. Upon this structure all possible communication types can be expressed (synchronous, asynchronous etc.) |   |
 
 ### Extended Elements
+
 |  |  |  |
 |--|--|--|  
 | ![Multi-token Place](../assets/img/notation_reference/dynamic/multi-token_place.gif) | multi-token place | Places which can hold multiple tokens but not an infinite number are indicated as enlarged places with an annotation specifying the capacity (n>1). Places with an infinite capacity are indicated by double a circle. |
 | ![Directed Arc](../assets/img/notation_reference/dynamic/arc.gif) | directed arc | The arc weight n determines how much tokens will be consumed or produced when the connected transition fires. An arc weight of 1 is assumed, if there is no one specified. |
 
 ### Recursion Elements
+
 |  |  |  |
 |--|--|--|  
 | ![Stack Place](../assets/img/notation_reference/dynamic/stack_place.gif) | stack place (cap.1, cap. infinite) | Is a place to store information about return positions using stack tokens. <br/> All stack places with the same name are strongly coupled with each other as the stack tokens, although placed on several stack places, are managed in a single stack. So all the stack places together constitute the return stack. |
@@ -114,6 +119,7 @@ Each recursive diagram shows the following characteristics:
 FMC Entity Relationship Diagrams are used to depict value range structures or topics as mathematical structures. Value range structures describe observable values at locations within the system whereas topic diagrams allow a much wider usage in order to cover all correlations between interesting points.
 
 ### Basic Elements
+
 |  |  | |
 |--|--|--|  
 | ![Entity Set](../assets/img/notation_reference/value_range/entity.gif) | entity set | Consists of classified entities. Sets of entities participate in relations. Furthermore attributes (A1 ... An) might be specified. <br/> (Note: singular nouns should be used for identifier "E") |
@@ -121,12 +127,14 @@ FMC Entity Relationship Diagrams are used to depict value range structures or to
 | ![Arc](../assets/img/notation_reference/value_range/arc.gif) | arc | Connects a relation and an entity set. <br/> A cardinality range may specify the minimum and maximum number of participation of all entities from the respective entity set in the relation just like the (min,max)-notation. <br/> Furthermore a role might clarify the kind of participation of an entity in the relation. <br/> (Note: singular nouns should be used for identifier "role") |
 
 ### Further Elements
+
 |  |  | |
 |--|--|--|  
 | ![Orthogonal Partitioning](../assets/img/notation_reference/value_range/orthogonal_partitioning_symbol.gif) | orthogonal partitioning | Additional partitioning of an entity set which is independent from any previous partitioning. |
 | ![Structure Entity](../assets/img/notation_reference/value_range/structure_entity.gif) | structure entity | Is used to create an entity set from a structure (entity sets and relations). |
 
 ### Common Structures
+
 |  |  | |
 |--|--|--|  
 | ![n:m Relation](../assets/img/notation_reference/value_range/n-m_relation.gif) | n:m relation | Each element of E1 occurs i to n times in the relation with E2 while each element of E2 occurs j to m times in the relation. |
@@ -134,6 +142,7 @@ FMC Entity Relationship Diagrams are used to depict value range structures or to
 | ![1:1 Relation](../assets/img/notation_reference/value_range/1-1_relation.gif) | 1:1 relation | Is like an one-to-one function. One element of E1 is associated to exactly one element of E2 and vice versa. <br/> (Note: the cardinality ranges should be omitted due to the arrow symbol inside the relation. Deviant cardinality ranges must be mentioned explicitly.) |
 
 ### Advanced
+
 |  |  | |
 |--|--|--|  
 | ![n-ary Relation](../assets/img/notation_reference/value_range/n_ary_relation.gif) | n-ary relation (e.g., ternary) | Sometimes it is necessary to correlate more than two entity sets to each other via n ary relations. The example shows a ternary relation. |
