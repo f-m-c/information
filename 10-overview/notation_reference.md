@@ -37,29 +37,29 @@ FMC Block diagrams show the compositional structures as a composition of collabo
 
 ### Basic Elements
 
-|  |  | |
-|--|--|--|  
-| ![Agents](../assets/img/notation_reference/compositional/agent.gif) | active system component: <br/>agent, human agent | Serves a well-defined purpose and therefore has access to adjacent passive system components and only those may be connected to it. <br/> A human agent is an active system component exactly like an agent but the only difference that it depicts a human.<br/>(Note: nouns should be used for identifier "A") |
-| ![Storages + Channels](../assets/img/notation_reference/compositional/location.gif) | passive system component (location):<br/> storage, channel | A Storage is used by agents to store data. <br/> A channel is used for communication purposes between at least two active system components. <br/> (Note: channels are usually depicted as smaller circles but may also vary like the graphical representation of storage places) |
-| ![Access](../assets/img/notation_reference/compositional/access_type.gif) | access type | Directed and undirected edges represent the kind of access an active system component has to a passive system component. The types of access are read access, write access and a combination of both. <br/> (Note: usually undirected edges depicting read/write access are used on channels whereas two directed edges also depicting  read/write access are used on storages) |
+|  |  | 
+|--|--| 
+| ![Agents](../assets/img/notation_reference/compositional/agent.gif) <br/> active system component: <br/>agent, human agent | Serves a well-defined purpose and therefore has access to adjacent passive system components and only those may be connected to it. <br/> A human agent is an active system component exactly like an agent but the only difference that it depicts a human.<br/>(Note: nouns should be used for identifier "A") |
+| ![Storages + Channels](../assets/img/notation_reference/compositional/location.gif) <br/> passive system component (location):<br/> storage, channel | A Storage is used by agents to store data. <br/> A channel is used for communication purposes between at least two active system components. <br/> (Note: channels are usually depicted as smaller circles but may also vary like the graphical representation of storage places) |
+| ![Access](../assets/img/notation_reference/compositional/access_type.gif) <br/> access type | Directed and undirected edges represent the kind of access an active system component has to a passive system component. The types of access are read access, write access and a combination of both. <br/> (Note: usually undirected edges depicting read/write access are used on channels whereas two directed edges also depicting  read/write access are used on storages) |
 
 ### Common Structures
 
-|  |  | |
-|--|--|--|  
-| ![Read Access](../assets/img/notation_reference/compositional/read_access.gif) | read access | Agent A has read access to storage S. |
-| ![Write Access](../assets/img/notation_reference/compositional/write_access.gif) | write access | Agent A has write access to storage S. In case of writing all information stored in S is overwritten. |
-| ![Modifying Access](../assets/img/notation_reference/compositional/modifying_access.gif) | read / write access (modifying access) | Agent A has modifying access to storage S. That means that some particular information of S can be changed. |
-| ![Unidirectional Channel](../assets/img/notation_reference/compositional/unidirectional_channel.gif) | unidirectional communication channel | Information can only be passed from agent A1 to agent A2. |
-| ![Bidirectional Channel](../assets/img/notation_reference/compositional/bidirectional_channel.gif) | bidirectional communication channel | Information can be exchanged in both directions (from agent A1 to agent A2 and vice versa). |
-| ![Request-Response Channel](../assets/img/notation_reference/compositional/request-response_channel.gif) | request / response communication channel (detailed and abbreviation) | Agent A1 can request information from agent A2 which in turn responds (e.g. function calls or http request/responses). <br/> Because it is very common, the lower figure shows an abbreviation of the request/response channel. |
-| ![Shared Storage](../assets/img/notation_reference/compositional/shared_storage.gif) | shared storage | Agent A1 and agent A2 can communicate via the shared storage S much like bidirectional communication channels. |
+|  |  | 
+|--|--|
+| ![Read Access](../assets/img/notation_reference/compositional/read_access.gif) <br/> read access | Agent A has read access to storage S. |
+| ![Write Access](../assets/img/notation_reference/compositional/write_access.gif) <br/> write access | Agent A has write access to storage S. In case of writing all information stored in S is overwritten. |
+| ![Modifying Access](../assets/img/notation_reference/compositional/modifying_access.gif) <br/> read / write access (modifying access) | Agent A has modifying access to storage S. That means that some particular information of S can be changed. |
+| ![Unidirectional Channel](../assets/img/notation_reference/compositional/unidirectional_channel.gif) <br/> unidirectional communication channel | Information can only be passed from agent A1 to agent A2. |
+| ![Bidirectional Channel](../assets/img/notation_reference/compositional/bidirectional_channel.gif) <br/> bidirectional communication channel | Information can be exchanged in both directions (from agent A1 to agent A2 and vice versa). |
+| ![Request-Response Channel](../assets/img/notation_reference/compositional/request-response_channel.gif) <br/> request / response communication channel (detailed and abbreviation) | Agent A1 can request information from agent A2 which in turn responds (e.g. function calls or http request/responses). <br/> Because it is very common, the lower figure shows an abbreviation of the request/response channel. |
+| ![Shared Storage](../assets/img/notation_reference/compositional/shared_storage.gif) <br/> shared storage | Agent A1 and agent A2 can communicate via the shared storage S much like bidirectional communication channels. |
 
 ### Advanced
 
-|  |  | |
-|--|--|--|  
-| ![Structure Variance](../assets/img/notation_reference/compositional/structure_variance.gif) | structure variance | Structure variance deals with the creation and disappearance of system components. An agent which is responsible for the system structure changes must exist. There also must be a location where the system structure change takes place. This location is depicted as dotted storage. <br/> In this example agent A1 can create/delete agents A2 to An. Creation and deletion is depicted as modifying access. After creation agent A1 can communicate with the agents A2 to An or vice versa. |
+|  |  |
+|--|--| 
+| ![Structure Variance](../assets/img/notation_reference/compositional/structure_variance.gif) <br/> structure variance | Structure variance deals with the creation and disappearance of system components. An agent which is responsible for the system structure changes must exist. There also must be a location where the system structure change takes place. This location is depicted as dotted storage. <br/> In this example agent A1 can create/delete agents A2 to An. Creation and deletion is depicted as modifying access. After creation agent A1 can communicate with the agents A2 to An or vice versa. |
 
 ## 2. FMC Petri Nets - Dynamic Structures
 
@@ -67,18 +67,18 @@ FMC diagrams for dynamic structures are based on transition-place Petri nets. Th
 
 ### Basic Elements
 
-|  |  | |
-|--|--|--|  
-| ![Transition](../assets/img/notation_reference/dynamic/transition.gif) | transition | Stands for an operation, an event or an activity. <br/> (Note: verb should be used for identifier "T") |
-| ![Place](../assets/img/notation_reference/dynamic/place.gif) | unmarked and marked place | A place represents a control state or an additional condition. It may be marked, i.e. it holds a token. <br/> (Note: here capacity = 1, i.e. a place cannot hold more than one token at the same time) |
-| ![Directed Arc](../assets/img/notation_reference/dynamic/directed_arc.gif) | directed arc | Connects a place and a transition. <br/> (Note: here arc weight = 1, i.e. exactly one token will be consumed or produced when the connected transition fires) |
+|  |  | 
+|--|--| 
+| ![Transition](../assets/img/notation_reference/dynamic/transition.gif) <br/> transition | Stands for an operation, an event or an activity. <br/> (Note: verb should be used for identifier "T") |
+| ![Place](../assets/img/notation_reference/dynamic/place.gif) <br/> unmarked and marked place | A place represents a control state or an additional condition. It may be marked, i.e. it holds a token. <br/> (Note: here capacity = 1, i.e. a place cannot hold more than one token at the same time) |
+| ![Directed Arc](../assets/img/notation_reference/dynamic/directed_arc.gif) <br/> directed arc | Connects a place and a transition. <br/> (Note: here arc weight = 1, i.e. exactly one token will be consumed or produced when the connected transition fires) |
 
 ### Further Elements 
 
-| |  | |
-|--|--|--|  
-| ![No Operation](../assets/img/notation_reference/dynamic/NOP.gif) | NOP | A transition meaning No OPeration. <br/> (Note: often used to preserve the bipartiteness) |
-| ![Swimlane Divider](../assets/img/notation_reference/dynamic/swimlane_divider.gif) | swimlane divider | Distinguishes competences of agents. |
+| |  | 
+|--|--|
+| ![No Operation](../assets/img/notation_reference/dynamic/NOP.gif) <br/> NOP | A transition meaning No OPeration. <br/> (Note: often used to preserve the bipartiteness) |
+| ![Swimlane Divider](../assets/img/notation_reference/dynamic/swimlane_divider.gif) <br/> swimlane divider | Distinguishes competences of agents. |
 
 ### Common Structures
 
@@ -89,17 +89,17 @@ FMC diagrams for dynamic structures are based on transition-place Petri nets. Th
 
 ### Extended Elements
 
-|  |  |  |
-|--|--|--|  
-| ![Multi-token Place](../assets/img/notation_reference/dynamic/multi-token_place.gif) | multi-token place | Places which can hold multiple tokens but not an infinite number are indicated as enlarged places with an annotation specifying the capacity (n>1). Places with an infinite capacity are indicated by double a circle. |
-| ![Directed Arc](../assets/img/notation_reference/dynamic/arc.gif) | directed arc | The arc weight n determines how much tokens will be consumed or produced when the connected transition fires. An arc weight of 1 is assumed, if there is no one specified. |
+|  |  |  
+|--|--|
+| ![Multi-token Place](../assets/img/notation_reference/dynamic/multi-token_place.gif) <br/> multi-token place | Places which can hold multiple tokens but not an infinite number are indicated as enlarged places with an annotation specifying the capacity (n>1). Places with an infinite capacity are indicated by double a circle. |
+| ![Directed Arc](../assets/img/notation_reference/dynamic/arc.gif) <br/> directed arc | The arc weight n determines how much tokens will be consumed or produced when the connected transition fires. An arc weight of 1 is assumed, if there is no one specified. |
 
 ### Recursion Elements
 
-|  |  |  |
-|--|--|--|  
-| ![Stack Place](../assets/img/notation_reference/dynamic/stack_place.gif) | stack place (cap.1, cap. infinite) | Is a place to store information about return positions using stack tokens. <br/> All stack places with the same name are strongly coupled with each other as the stack tokens, although placed on several stack places, are managed in a single stack. So all the stack places together constitute the return stack. |
-| ![Return Place](../assets/img/notation_reference/dynamic/return_place.gif) | return place | Is used like a normal place. But there is always a conflict to solve as a return place is an input place for at least two transitions that also have stack places as input places. <br/> When a return place gets a token and more than one associated stack places have a stack token the conflict is always solved in the same manner: the newest token on the stack must be consumed first. The newest token belongs to exactly one stack place and so the transition where this stack place is an input place will fire. |
+|  |  |  
+|--|--|  
+| ![Stack Place](../assets/img/notation_reference/dynamic/stack_place.gif) <br/> stack place (cap.1, cap. infinite) | Is a place to store information about return positions using stack tokens. <br/> All stack places with the same name are strongly coupled with each other as the stack tokens, although placed on several stack places, are managed in a single stack. So all the stack places together constitute the return stack. |
+| ![Return Place](../assets/img/notation_reference/dynamic/return_place.gif) <br/> return place | Is used like a normal place. But there is always a conflict to solve as a return place is an input place for at least two transitions that also have stack places as input places. <br/> When a return place gets a token and more than one associated stack places have a stack token the conflict is always solved in the same manner: the newest token on the stack must be consumed first. The newest token belongs to exactly one stack place and so the transition where this stack place is an input place will fire. |
 
 ### General Recursion Scheme
 
@@ -120,32 +120,32 @@ FMC Entity Relationship Diagrams are used to depict value range structures or to
 
 ### Basic Elements
 
-|  |  | |
-|--|--|--|  
-| ![Entity Set](../assets/img/notation_reference/value_range/entity.gif) | entity set | Consists of classified entities. Sets of entities participate in relations. Furthermore attributes (A1 ... An) might be specified. <br/> (Note: singular nouns should be used for identifier "E") |
-| ![Relation](../assets/img/notation_reference/value_range/relation.gif) | relation (n:m, 1:n, 1:1) | Is a subset of the cross product of all entities from the participating  entity sets. <br/> If the relation identifier "R" is aligned with one of the entity set symbols it should be read from this direction. A sentence can be build up like: aligned entity set identifier + relation identifier + entity set identifier. <br/> If the relation identifier "R" is aligned in the middle of the relation symbol there is no reading direction (usually nouns are used in this case). |
-| ![Arc](../assets/img/notation_reference/value_range/arc.gif) | arc | Connects a relation and an entity set. <br/> A cardinality range may specify the minimum and maximum number of participation of all entities from the respective entity set in the relation just like the (min,max)-notation. <br/> Furthermore a role might clarify the kind of participation of an entity in the relation. <br/> (Note: singular nouns should be used for identifier "role") |
+|  |  | 
+|--|--|
+| ![Entity Set](../assets/img/notation_reference/value_range/entity.gif) <br/> entity set | Consists of classified entities. Sets of entities participate in relations. Furthermore attributes (A1 ... An) might be specified. <br/> (Note: singular nouns should be used for identifier "E") |
+| ![Relation](../assets/img/notation_reference/value_range/relation.gif) <br/> relation (n:m, 1:n, 1:1) | Is a subset of the cross product of all entities from the participating  entity sets. <br/> If the relation identifier "R" is aligned with one of the entity set symbols it should be read from this direction. A sentence can be build up like: aligned entity set identifier + relation identifier + entity set identifier. <br/> If the relation identifier "R" is aligned in the middle of the relation symbol there is no reading direction (usually nouns are used in this case). |
+| ![Arc](../assets/img/notation_reference/value_range/arc.gif) <br/> arc | Connects a relation and an entity set. <br/> A cardinality range may specify the minimum and maximum number of participation of all entities from the respective entity set in the relation just like the (min,max)-notation. <br/> Furthermore a role might clarify the kind of participation of an entity in the relation. <br/> (Note: singular nouns should be used for identifier "role") |
 
 ### Further Elements
 
-|  |  | |
-|--|--|--|  
-| ![Orthogonal Partitioning](../assets/img/notation_reference/value_range/orthogonal_partitioning_symbol.gif) | orthogonal partitioning | Additional partitioning of an entity set which is independent from any previous partitioning. |
-| ![Structure Entity](../assets/img/notation_reference/value_range/structure_entity.gif) | structure entity | Is used to create an entity set from a structure (entity sets and relations). |
+|  |  | 
+|--|--|  
+| ![Orthogonal Partitioning](../assets/img/notation_reference/value_range/orthogonal_partitioning_symbol.gif) <br/> orthogonal partitioning | Additional partitioning of an entity set which is independent from any previous partitioning. |
+| ![Structure Entity](../assets/img/notation_reference/value_range/structure_entity.gif) <br/> structure entity | Is used to create an entity set from a structure (entity sets and relations). |
 
 ### Common Structures
 
-|  |  | |
-|--|--|--|  
-| ![n:m Relation](../assets/img/notation_reference/value_range/n-m_relation.gif) | n:m relation | Each element of E1 occurs i to n times in the relation with E2 while each element of E2 occurs j to m times in the relation. |
-| ![1:n Relation](../assets/img/notation_reference/value_range/1-n_relation.gif) | 1:n relation | Is like an unique function f(x∈E1)=y∈E2. Each element of E1 is associated with exactly one element of E2. <br/> (Note: the cardinality ranges should be omitted due to the arrow symbol inside the relation. Deviant cardinality ranges must be mentioned explicitly.) |
-| ![1:1 Relation](../assets/img/notation_reference/value_range/1-1_relation.gif) | 1:1 relation | Is like an one-to-one function. One element of E1 is associated to exactly one element of E2 and vice versa. <br/> (Note: the cardinality ranges should be omitted due to the arrow symbol inside the relation. Deviant cardinality ranges must be mentioned explicitly.) |
+|  |  | 
+|--|--|
+| ![n:m Relation](../assets/img/notation_reference/value_range/n-m_relation.gif) <br/> n:m relation | Each element of E1 occurs i to n times in the relation with E2 while each element of E2 occurs j to m times in the relation. |
+| ![1:n Relation](../assets/img/notation_reference/value_range/1-n_relation.gif) <br/> 1:n relation | Is like an unique function f(x∈E1)=y∈E2. Each element of E1 is associated with exactly one element of E2. <br/> (Note: the cardinality ranges should be omitted due to the arrow symbol inside the relation. Deviant cardinality ranges must be mentioned explicitly.) |
+| ![1:1 Relation](../assets/img/notation_reference/value_range/1-1_relation.gif) <br/> 1:1 relation | Is like an one-to-one function. One element of E1 is associated to exactly one element of E2 and vice versa. <br/> (Note: the cardinality ranges should be omitted due to the arrow symbol inside the relation. Deviant cardinality ranges must be mentioned explicitly.) |
 
 ### Advanced
 
-|  |  | |
-|--|--|--|  
-| ![n-ary Relation](../assets/img/notation_reference/value_range/n_ary_relation.gif) | n-ary relation (e.g., ternary) | Sometimes it is necessary to correlate more than two entity sets to each other via n ary relations. The example shows a ternary relation. |
-| ![Reification](../assets/img/notation_reference/value_range/reification.gif) | reification | Elements of a relation constitute the elements of a new entity set, which in turn can participate in other relations. The example shows the relation C being reificated. |
-| ![Orthogonal Partitioning](../assets/img/notation_reference/value_range/orthogonal_partitioning.gif) | orthogonal partitioning | Partitioning of entity set E into the entity sets X, Y and additional independent partitioning of entity set E into the entity sets A, B. |
-| ![Structure Entity Set](../assets/img/notation_reference/value_range/structure_entity_example.gif) | structure entity set | Indicated by a dotted line style, is able to contain a whole structure (consisting of entity sets and relations). This is particularly useful for covering a level and its meta level at the same time. |
+|  |  | 
+|--|--|
+| ![n-ary Relation](../assets/img/notation_reference/value_range/n_ary_relation.gif) <br/> n-ary relation (e.g., ternary) | Sometimes it is necessary to correlate more than two entity sets to each other via n ary relations. The example shows a ternary relation. |
+| ![Reification](../assets/img/notation_reference/value_range/reification.gif) <br/> reification | Elements of a relation constitute the elements of a new entity set, which in turn can participate in other relations. The example shows the relation C being reificated. |
+| ![Orthogonal Partitioning](../assets/img/notation_reference/value_range/orthogonal_partitioning.gif) <br/> orthogonal partitioning | Partitioning of entity set E into the entity sets X, Y and additional independent partitioning of entity set E into the entity sets A, B. |
+| ![Structure Entity Set](../assets/img/notation_reference/value_range/structure_entity_example.gif) <br/> structure entity set | Indicated by a dotted line style, is able to contain a whole structure (consisting of entity sets and relations). This is particularly useful for covering a level and its meta level at the same time. |

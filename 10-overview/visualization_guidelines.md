@@ -56,7 +56,7 @@ A graph may have several different types of nodes (subsets of nodes) usually hav
 
 The graph structure (see [Figure 1](#fig1)) is not concerned by the visualization guidelines at all, as they only affect the visual appearance of the graph: the layout of the nodes and the edges on a surface and the labeling of these elements. Figure 2: shows an example of two different laid out graphs having the same graph structure.
 
-![Same Graph structure](../assets/img/visualization_guidelines/FMC-VisualizationGuidelines-2.gif)<br/>Figure 2: Two different laid out graphs having the same graph structure<a id="fig2"></a>
+<a id="fig2"></a> ![Same Graph structure](../assets/img/visualization_guidelines/FMC-VisualizationGuidelines-2.gif)<br/>Figure 2: Two different laid out graphs having the same graph structure<a id="fig2"></a>
 
 By classifying the guidelines based on their intention two sets can be identified:
 
@@ -117,7 +117,7 @@ The number of intersections (of edges) should be minimized. They usually distrac
 
 ### Horizontal or vertical edges
 
-Edges in general should run horizontally or vertically to improve the harmonization of the diagram as it reduces significantly the number of different (edge) angles. Of course this entirely depends on the diagram type to be laid out. Diagonal edges may be more useful e.g. for depicting a strong hierarchy as shown in Figure 2 on the left. More complex diagrams benefit from horizontal and vertical edges respectively because a better harmonization of the diagram can be achieved.
+Edges in general should run horizontally or vertically to improve the harmonization of the diagram as it reduces significantly the number of different (edge) angles. Of course this entirely depends on the diagram type to be laid out. Diagonal edges may be more useful e.g. for depicting a strong hierarchy as shown in [Figure 2](#fig2) on the left. More complex diagrams benefit from horizontal and vertical edges respectively because a better harmonization of the diagram can be achieved.
 
 ### Rounded corners
 
@@ -216,7 +216,7 @@ As diagrams are generally viewed in printed form, the author should also restric
 
 ### Arrangement of nodes
 
-Arranging nodes may help to emphasize the meaning of certain nodes or of the diagram itself. A node placed in the center of the drawing also may have a central role opposed to nodes placed on the outer areas. Nevertheless the placing may also be specific to the diagram type. E.g. nodes of flow diagrams are usually placed from top to bottom or left to right to underline the overall flow of the diagram. Another example is a hierarchy graph like Figure 2 on the left where the arrangement of nodes corresponds to the hierarchy level.
+Arranging nodes may help to emphasize the meaning of certain nodes or of the diagram itself. A node placed in the center of the drawing also may have a central role opposed to nodes placed on the outer areas. Nevertheless the placing may also be specific to the diagram type. E.g. nodes of flow diagrams are usually placed from top to bottom or left to right to underline the overall flow of the diagram. Another example is a hierarchy graph like [Figure 2](#fig2) on the left where the arrangement of nodes corresponds to the hierarchy level.
 
 Related nodes should be positioned next to each other. It will be assumed that they are connected or related. Nodes which are within the same frame are usually seen as related. Even if the nodes are far away from each other they are still linked by the frame. It would be the best if the nodes were close to each other and within a frame.
 
@@ -350,7 +350,7 @@ Edge trees are often used in Petri nets to reduce the complexity of condition la
 
 The standard flow direction of a Petri net should be from top to bottom or from left to right as it depicts a sequence of actions. The input places and output places should also be put above and below the transitions in case of a top to bottom flow direction and left handed and right handed in case of a left or right flow direction. Arranging the places this way simplifies reading of the Petri net as the reader does not need to pay exhausting attention to the direction of edges.
 
-There are good reasons however not to follow that guideline. Loop constructs (see Figure 38) as an example do have the same place as input and output place and therefore can be placed above, below or beside the transition.
+There are good reasons however not to follow that guideline. Loop constructs (see [Figure 38](#fig38)) as an example do have the same place as input and output place and therefore can be placed above, below or beside the transition.
 
 ### Shape and area of nodes
 
@@ -444,7 +444,7 @@ See also Emphasize the normal flow of control for an exception to that layout pa
 
 The standard construct for loops is depicted in Figure 38. Here the loop in the sense that something is going round and round is visualized as the action is repeated. The transitions at the top and the bottom of the pattern are smaller and have no label compared to "normal" transitions. These NOP transitions have no meaning and are only used to guarantee the bipartiteness of the diagram in this context.
 
-![Figure 38: Layout pattern for loops](../assets/img/visualization_guidelines/FMC-VisualizationGuidelines-38.gif)<br/>Figure 38: Layout pattern for loops<a id="fig38"></a>
+<a id="fig38"></a> ![Figure 38: Layout pattern for loops](../assets/img/visualization_guidelines/FMC-VisualizationGuidelines-38.gif)<br/>Figure 38: Layout pattern for loops
 
 Figure 39 depicts the layout pattern for concurrency. The two transitions at the top and the bottom are as wide as the concurrent transitions to underline where the concurrent transitions are bound to. This makes it easy to identify parts of the diagram where concurrency occurs. An exception to this layout is described in Standard communication construct.
 
